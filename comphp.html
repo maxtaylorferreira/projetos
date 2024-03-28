@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELO Elétrica</title>
+  <style>
+    /* Estilo CSS refinado */
+    /* Reset de estilos para garantir uma base consistente */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilo básico para o corpo da página */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilo para cabeçalhos (h1, h2, h3, etc.) */
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    /* Estilo para links */
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Estilo para links visitados */
+    a:visited {
+      color: #800080; /* Roxo escuro para links visitados */
+    }
+
+    /* Estilo para botões */
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilo para inputs e selects */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* Estilo para labels */
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    /* Estilo para seções */
+    section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilo para rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Estilo para dispositivos móveis */
+    @media only screen and (max-width: 768px) {
+      /* Estilo para cabeçalhos */
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2em;
+      }
+
+      /* Estilo para inputs e selects */
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+      }
+
+      /* Estilo para botões */
+      button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+
+      /* Estilo para rodapé */
+      footer {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo da ELO Elétrica" class="logo">
+    <p class="endereco">AV. Governador Orestes Qu&eacute;rcia 1301, Bairro Altos Jaragu&aacute;</p>
+  </header>
+  <nav>
+    <h2>Os nossos servi&ccedil;os</h2>
+    <ul>
+      <li>
+        <img src="instalacao.jpg" alt="Instala&ccedil;&atilde;o elétrica">
+        <p>Fazemos instala&ccedil;&otilde;es elétricas residenciais com seguran&ccedil;a e qualidade.</p>
+      </li>
+      <li>
+        <img src="manutencao.jpg" alt="Manuten&ccedil;&atilde;o elétrica">
+        <p>Oferecemos servi&ccedil;os de manuten&ccedil;&atilde;o elétrica preventiva e corretiva.</p>
+      </li>
+      <li>
+        <img src="iluminacao.jpg" alt="Ilumina&ccedil;&atilde;o residencial">
+        <p>Projetamos e instalamos ilumina&ccedil;&atilde;o residencial de acordo com as suas necessidades.</p>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <h2>Agende o seu hor&aacute;rio</h2>
+    <form id="agendamento-form" method="post" action="processa_agendamento.php">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      <label for="servico">Serviço:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione um serviço</option>
+        <option value="instalacao">Instalação elétrica</option>
+        <option value="manutencao">Manutenção elétrica</option>
+        <option value="iluminacao">Iluminação
+            residencial</option>
+        </select>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <footer>
+      <h2>Fale conosco</h2>
+      <p>Se você tiver alguma dúvida ou sugestão, entre em contato conosco pelos seguintes meios:</p>
+      <p>Telefone: (16) 99750-3789</p>
+      <p>E-mail: elloeletrica@hotmail.com</p>
+      <p><a href="https://wa.me/5516997503789">WhatsApp</a></p>
+    </footer>
+  
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $nome = $_POST['nome'];
+      $email = $_POST['email'];
+      $telefone = $_POST['telefone'];
+      $servico = $_POST['servico'];
+      $data = $_POST['data'];
+      $hora = $_POST['hora'];
+  
+      // Processar os dados ou enviar por e-mail
+      // Aqui você pode adicionar o código para enviar os dados por e-mail ou salvá-los em um banco de dados
+      // Exemplo de envio por e-mail:
+      $destinatario = "elloeletrica@hotmail.com";
+      $assunto = "Novo agendamento recebido";
+      $mensagem = "Novo agendamento:\n\nNome: $nome\nE-mail: $email\nTelefone: $telefone\nServiço: $servico\nData: $data\nHora: $hora";
+      mail($destinatario, $assunto, $mensagem);
+  
+      // Exibir página de confirmação
+      echo "<div class='container'>";
+      echo "<h2>Obrigado pelo seu agendamento!</h2>";
+      echo "<p>Entraremos em contato em breve para confirmar o horário agendado.</p>";
+      echo "</div>";
+    }
+    ?>
+  </body>
+  </html>
+  
